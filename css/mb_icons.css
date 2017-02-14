@@ -1,0 +1,95 @@
+.mb {
+  font-size: 64px;
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-black_icon_outline {
+  width: 0.94921875em;
+}
+
+.icon-black_ed_outline {
+  width: 0.9453125em;
+}
+
+.icon-black_mt_outline {
+  width: 0.947265625em;
+}
+
+.icon-black_nt_outline {
+  width: 0.947265625em;
+}
+
+.icon-black_sp_outline {
+  width: 0.9482421875em;
+}
+
+.icon-regular_icon {
+  width: 0.9443359375em;
+}
+
+.icon-white_icon {
+  width: 0.9443359375em;
+}
+
+.icon-black_icon {
+  width: 0.9443359375em;
+}
+
+.icon-ad_color {
+  width: 1.0869140625em;
+}
+
+.icon-aq_color {
+  width: 0.9443359375em;
+}
+
+.icon-ed_color {
+  width: 0.9423828125em;
+}
+
+.icon-mt_color {
+  width: 0.9443359375em;
+}
+
+.icon-nt_color {
+  width: 0.9443359375em;
+}
+
+.icon-aq_outline {
+  width: 0.947265625em;
+}
+
+.icon-ed_outline {
+  width: 0.9453125em;
+}
+
+.icon-mt_outline {
+  width: 0.947265625em;
+}
+
+.icon-nt_outline {
+  width: 0.947265625em;
+}
+
+.icon-outline_icon {
+  width: 0.94921875em;
+}
+
+.icon-sp_outline {
+  width: 0.9482421875em;
+}
+
+.icon-white_icon_outline {
+  width: 0.94921875em;
+}

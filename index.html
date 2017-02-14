@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Mediabelt | Convert without the clutter</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+      <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+      <link href="css/theme-purple.css" rel="stylesheet" type="text/css" media="all" />
+      <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+      <link rel="stylesheet" href="css/sailec.css">
+      <link rel="stylesheet" href="css/apercu.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/mb_icons.css">
+   </head>
+   <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+         <symbol id="icon-black_icon_outline" viewBox="0 0 30 32">
+            <title>black_icon_outline</title>
+            <path fill="none" stroke="#000" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" d="M15.090 6.085l-9.758 9.025-3.999-3.833v-0.613c0-3.913 0.4-8.158 5.059-9.098 3.733-0.766 6.272 2.226 8.698 4.519z"></path>
+            <path fill="none" stroke="#000" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" d="M28.981 12.951l-13.65 12.491-9.998-10.331 9.758-9.025c2.426-2.333 4.906-5.379 8.665-4.666 4.666 0.88 5.152 5.112 5.179 9.031q0.033 1.26 0.047 2.499z"></path>
+            <path fill="none" stroke="#000" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" d="M15.33 25.441l-1.733 2.086c-0.282 0.323-0.588 0.611-0.918 0.869l-0.015 0.011c-2.16 1.82-4.146 2.973-7.072 1.766s-4.092-3.886-4.166-6.845c-0.093-3.999-0.093-8.045-0.093-12.051l3.999 3.833z"></path>
+            <path fill="none" stroke="#000" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" d="M29.041 23.109c0 2.993-1.106 5.659-4.046 6.925s-4.912 0.12-7.099-1.666v0c-0.362-0.265-0.681-0.549-0.969-0.862l-1.597-2.064 13.65-12.491c0.047 3.386 0.093 6.779 0.060 10.158z"></path>
+         </symbol>
+         <symbol id="icon-black_ed_outline" viewBox="0 0 30 32">
+            <title>black_ed_outline</title>
+            <path d="M4.941 16.227l-4.941-4.756v-0.355c0-0.213 0-0.426 0-0.638 0-2.913-0.061-9.021 5.901-10.227 3.849-0.78 6.52 1.806 8.879 4.085 0.284 0.274 0.567 0.548 0.846 0.813l0.652 0.61zM1.669 10.761l3.31 3.177 8.861-8.199-0.217-0.213c-2.161-2.090-4.397-4.255-7.39-3.65-3.844 0.785-4.596 3.868-4.563 8.591z"></path>
+            <path d="M7.565 32c-0.973-0.011-1.895-0.221-2.73-0.59-2.991-1.245-4.646-3.964-4.74-7.836-0.095-3.196-0.095-6.44-0.095-9.579q0-1.418 0-2.879v-1.962l4.965 4.785 10.123-9.348 0.274-0.269c2.331-2.303 4.969-4.922 8.827-4.199 5.972 1.125 6.014 7.22 6.038 10.151q0 1.277 0.028 2.558v0.374l-0.274 0.265-14.071 12.875-1.759 2.109c-0.332 0.377-0.693 0.714-1.084 1.013-1.522 1.266-3.262 2.533-5.503 2.533zM1.669 13.087v0.908c0 3.13 0 6.364 0.080 9.537s1.348 5.352 3.783 6.355 4.18 0.222 6.407-1.645v0l0.066-0.052c0.323-0.242 0.608-0.503 0.865-0.789l1.868-2.228 13.849-12.686q0-1.102-0.024-2.203c-0.033-4.728-0.827-7.801-4.681-8.511-3.002-0.577-5.206 1.617-7.333 3.735-0.293 0.293-0.586 0.586-0.879 0.865l-0.539 0.534-0.038-0.033-10.151 9.352z"></path>
+         </symbol>
+         <symbol id="icon-black_mt_outline" viewBox="0 0 30 32">
+            <title>black_mt_outline</title>
+            <path d="M4.94 16.244l-4.94-4.778v-0.354c0-0.215 0-0.43 0-0.645 0-2.919-0.057-9.034 5.9-10.219 3.851-0.779 6.521 1.806 8.877 4.085 0.287 0.277 0.569 0.549 0.85 0.812l0.65 0.588zM1.667 10.759l3.296 3.177 8.891-8.203-0.22-0.215c-2.169-2.078-4.414-4.242-7.424-3.636-3.822 0.779-4.577 3.851-4.543 8.585q0 0.148 0 0.291z"></path>
+            <path d="M7.568 32.010c-0.973-0.012-1.894-0.222-2.729-0.591-2.994-1.253-4.652-3.972-4.743-7.846-0.096-3.234-0.096-6.521-0.096-9.718q0-1.381 0-2.757v-1.944l4.964 4.778 10.076-9.297 0.315-0.311c2.322-2.308 4.973-4.926 8.834-4.199 5.977 1.123 6.015 7.219 6.034 10.148q0 1.276 0.029 2.556v0.956c0.038 3.134 0.081 6.373 0.048 9.555-0.029 3.894-1.634 6.641-4.668 7.945-3.583 1.543-6.106-0.134-8.184-1.835-0.414-0.306-0.778-0.636-1.108-0.997l-0.039-0.049-1.013-1.304-1.132 1.357c-0.332 0.378-0.694 0.715-1.086 1.014-1.528 1.275-3.267 2.541-5.503 2.541zM1.672 13.081q0 0.397 0 0.793c0 3.168 0 6.445 0.081 9.66s1.347 5.351 3.765 6.354c2.494 1.037 4.19 0.215 6.431-1.667l0.053-0.043c0.335-0.243 0.629-0.505 0.894-0.794l2.455-2.942 2.269 2.924c0.26 0.279 0.543 0.53 0.848 0.753l0.046 0.012c2.284 1.868 3.994 2.675 6.483 1.6 2.389-1.037 3.645-3.191 3.679-6.407v0c0.033-3.168 0-6.402-0.048-9.526v-0.956c0-0.865 0-1.72-0.029-2.575-0.072-4.706-0.889-7.783-4.711-8.509-3.010-0.564-5.212 1.634-7.348 3.755-0.296 0.291-0.588 0.583-0.879 0.865l-0.549 0.53-0.038-0.033-10.133 9.369z"></path>
+         </symbol>
+         <symbol id="icon-black_nt_outline" viewBox="0 0 30 32">
+            <title>black_nt_outline</title>
+            <path d="M15.273 26.93l-10.899-11.259-4.374-4.198v-0.995c0-2.924-0.057-9.022 5.9-10.226 3.848-0.777 6.52 1.805 8.875 4.085l0.299 0.289 0.289-0.289c2.331-2.317 4.966-4.938 8.804-4.213 5.999 1.123 6.042 7.222 6.061 10.15q0 0.99 0 1.99v0.948zM1.668 10.761l3.881 3.744 9.795 10.103 13.244-12.121v-0.204q0-1 0-1.995c-0.033-4.739-0.829-7.8-4.682-8.53-3-0.564-5.213 1.63-7.34 3.753-0.294 0.294-0.588 0.583-0.881 0.867l-0.588 0.569-0.578-0.578c-0.294-0.275-0.583-0.554-0.872-0.839-2.161-2.090-4.397-4.265-7.388-3.649-3.89 0.777-4.625 3.862-4.592 8.586z"></path>
+            <path d="M7.582 32c-0.972-0.012-1.892-0.222-2.727-0.591-3.012-1.243-4.666-3.958-4.76-7.834-0.095-3.199-0.095-6.44-0.095-9.582q0-1.422 0-2.876v-1.967l5.554 5.355 10.87 11.221-2.275 2.706c-0.328 0.373-0.685 0.706-1.072 1.001l-0.018 0.013c-1.507 1.294-3.251 2.554-5.478 2.554zM1.677 13.079v0.915c0 3.128 0 6.364 0.081 9.539s1.346 5.374 3.767 6.355 4.052 0.275 6.16-1.422v0l0.322-0.251c0.322-0.242 0.606-0.503 0.862-0.79l1.313-1.574-9.818-10.179z"></path>
+            <path d="M22.873 31.896c-2.194 0-3.924-1.218-5.426-2.44-0.414-0.311-0.779-0.647-1.107-1.016l-0.040-0.007-2.123-2.734 16.055-14.69 0.033 2.692c0.043 3.175 0.085 6.459 0.052 9.691-0.043 3.876-1.659 6.634-4.686 7.918-0.811 0.367-1.759 0.583-2.756 0.588zM17.599 27.366c0.265 0.28 0.553 0.533 0.864 0.756l0.046 0.012c2.284 1.867 3.99 2.677 6.482 1.602 2.407-1.038 3.644-3.194 3.677-6.407v0c0.028-2.843 0-5.781-0.038-8.629l-12.197 11.164z"></path>
+         </symbol>
+         <symbol id="icon-black_sp_outline" viewBox="0 0 30 32">
+            <title>black_sp_outline</title>
+            <path d="M28.857 12.236l0.023-0.021 1.132 1.222-0.023 0.021-1.132-1.222z"></path>
+            <path d="M4.942 16.23l-4.942-4.738v-0.992c0-2.946-0.057-9.042 5.903-10.249 3.85-0.778 6.519 1.802 8.88 4.080 0.287 0.277 0.569 0.548 0.851 0.815l0.642 0.601zM1.672 10.761l3.296 3.176 8.875-8.191-0.219-0.214c-2.163-2.089-4.398-4.252-7.386-3.657-3.85 0.784-4.602 3.871-4.565 8.572z"></path>
+            <path d="M7.569 32c-0.973-0.012-1.895-0.223-2.729-0.592-2.996-1.247-4.657-3.958-4.746-7.818-0.094-3.218-0.094-6.456-0.094-9.596q0-1.457 0-2.873v-1.969l4.968 4.785 10.082-9.309 0.308-0.308c2.335-2.304 4.973-4.921 8.828-4.195 5.976 1.123 6.023 7.219 6.039 10.15q0 0.956 0 1.917v1.045l-14.313 13.106-1.76 2.089c-0.329 0.381-0.686 0.721-1.075 1.022l-0.017 0.012c-1.51 1.269-3.249 2.533-5.49 2.533zM1.677 13.059v0.914c0 3.134 0 6.368 0.084 9.538s1.342 5.375 3.766 6.378 4.054 0.277 6.164-1.447v0l0.324-0.251c0.322-0.242 0.606-0.502 0.862-0.788l1.87-2.231 13.843-12.667v-0.277q0-0.961 0-1.928c-0.031-4.701-0.825-7.799-4.701-8.525-2.998-0.564-5.224 1.63-7.339 3.751-0.298 0.293-0.59 0.585-0.878 0.867l-0.585 0.559-0.037-0.037-10.108 9.314z"></path>
+            <path d="M22.874 31.896c-2.189 0-3.913-1.207-5.412-2.434v0c-0.42-0.308-0.79-0.641-1.123-1.007l-0.037-0.048-2.121-2.737 16.047-14.699 0.037 2.68c0.042 3.181 0.084 6.467 0.052 9.706-0.042 3.876-1.661 6.618-4.701 7.919-0.805 0.376-1.745 0.603-2.736 0.622zM18.246 27.962v0l0.23 0.188c2.293 1.87 3.986 2.669 6.498 1.625 2.408-1.045 3.657-3.192 3.657-6.409v0c0.031-2.868 0-5.783-0.037-8.629l-12.161 11.126 1.165 1.499c0.198 0.217 0.41 0.413 0.636 0.592z"></path>
+         </symbol>
+         <symbol id="icon-regular_icon" viewBox="0 0 30 32">
+            <title>regular_icon</title>
+            <path fill="#5c3ea5" style="fill: var(--color1, #5c3ea5)" d="M15 5.184l-10.638 9.845-4.363-4.181v-0.669c0-4.283 0.436-8.907 5.519-9.94 4.065-0.822 6.842 2.443 9.481 4.944z"></path>
+            <path fill="#684eaf" style="fill: var(--color2, #684eaf)" d="M30.153 12.673l-14.884 13.626-10.907-11.27 10.638-9.845c2.647-2.545 5.351-5.868 9.452-5.090 5.090 0.96 5.621 5.577 5.65 9.852q0.036 1.374 0.051 2.727z"></path>
+            <path fill="#52329c" style="fill: var(--color3, #52329c)" d="M15.269 26.299l-1.89 2.269c-0.308 0.355-0.641 0.672-1.002 0.955l-0.016 0.012c-2.356 1.985-4.523 3.243-7.715 1.927s-4.472-4.239-4.552-7.467c-0.095-4.363-0.095-8.776-0.095-13.146l4.363 4.181z"></path>
+            <path fill="#735bb9" style="fill: var(--color4, #735bb9)" d="M30.219 23.755c0 3.265-1.207 6.173-4.414 7.555s-5.359 0.131-7.744-1.818v0c-0.395-0.289-0.743-0.599-1.057-0.94l-1.735-2.252 14.884-13.626c0.051 3.694 0.102 7.395 0.065 11.081z"></path>
+         </symbol>
+         <symbol id="icon-white_icon" viewBox="0 0 30 32">
+            <title>white_icon</title>
+            <path fill="#cecece" style="fill: var(--color5, #cecece)" d="M15 5.184l-10.638 9.845-4.363-4.181v-0.669c0-4.283 0.436-8.907 5.519-9.94 4.065-0.822 6.842 2.443 9.481 4.944z"></path>
+            <path fill="#d8d8d8" style="fill: var(--color6, #d8d8d8)" d="M30.153 12.673l-14.884 13.626-10.907-11.27 10.638-9.845c2.647-2.545 5.351-5.868 9.452-5.090 5.090 0.96 5.621 5.577 5.65 9.852q0.036 1.374 0.051 2.727z"></path>
+            <path fill="#bdbdbd" style="fill: var(--color7, #bdbdbd)" d="M15.269 26.299l-1.89 2.269c-0.308 0.355-0.641 0.672-1.002 0.955l-0.016 0.012c-2.356 1.985-4.523 3.243-7.715 1.927s-4.472-4.239-4.552-7.467c-0.095-4.363-0.095-8.776-0.095-13.146l4.363 4.181z"></path>
+            <path fill="#e2e2e2" style="fill: var(--color8, #e2e2e2)" d="M30.219 23.755c0 3.265-1.207 6.173-4.414 7.555s-5.359 0.131-7.744-1.818v0c-0.395-0.289-0.743-0.599-1.057-0.94l-1.735-2.252 14.884-13.626c0.051 3.694 0.102 7.395 0.065 11.081z"></path>
+         </symbol>
+         <symbol id="icon-black_icon" viewBox="0 0 30 32">
+            <title>black_icon</title>
+            <path fill="#1d1d1d" style="fill: var(--color9, #1d1d1d)" d="M15 5.184l-10.638 9.845-4.363-4.181v-0.669c0-4.283 0.436-8.907 5.519-9.94 4.065-0.822 6.842 2.443 9.481 4.944z"></path>
+            <path fill="#2f2f2f" style="fill: var(--color10, #2f2f2f)" d="M30.153 12.673l-14.884 13.626-10.907-11.27 10.638-9.845c2.647-2.545 5.351-5.868 9.452-5.090 5.090 0.96 5.621 5.577 5.65 9.852q0.036 1.374 0.051 2.727z"></path>
+            <path fill="#0e0e0e" style="fill: var(--color11, #0e0e0e)" d="M15.269 26.299l-1.89 2.269c-0.308 0.355-0.641 0.672-1.002 0.955l-0.016 0.012c-2.356 1.985-4.523 3.243-7.715 1.927s-4.472-4.239-4.552-7.467c-0.095-4.363-0.095-8.776-0.095-13.146l4.363 4.181z"></path>
+            <path fill="#3f3f3f" style="fill: var(--color12, #3f3f3f)" d="M30.219 23.755c0 3.265-1.207 6.173-4.414 7.555s-5.359 0.131-7.744-1.818v0c-0.395-0.289-0.743-0.599-1.057-0.94l-1.735-2.252 14.884-13.626c0.051 3.694 0.102 7.395 0.065 11.081z"></path>
+         </symbol>
+         <symbol id="icon-ad_color" viewBox="0 0 35 32">
+            <title>ad_color</title>
+            <path fill="none" stroke="#914f28" stroke-width="2.2060" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color13, #914f28)" d="M34.020 11.795l-0.032 0.032"></path>
+            <path fill="#a9972e" style="fill: var(--color14, #a9972e)" d="M15.001 5.188l-10.631 9.839-4.369-4.183c0-0.223 0-0.452 0-0.675-0.027-4.268 0.436-8.898 5.518-9.924 4.050-0.824 6.809 2.413 9.483 4.944z"></path>
+            <path fill="#c6b663" style="fill: var(--color15, #c6b663)" d="M30.15 12.672l-14.884 13.624-1.892 2.27c-0.319 0.353-0.667 0.669-1.044 0.949l-0.019 0.014c-2.355 1.983-4.524 3.248-7.718 1.924s-4.433-4.253-4.513-7.495c-0.080-4.364-0.080-8.744-0.080-13.114l4.338 4.183 10.631-9.839h0.027c2.674-2.53 5.385-5.842 9.456-5.076 5.114 0.952 5.64 5.581 5.666 9.85 0.011 0.904 0.021 1.807 0.032 2.711z"></path>
+            <path fill="#b2a03a" style="fill: var(--color16, #b2a03a)" d="M30.214 23.755c-0.032 3.264-1.207 6.177-4.412 7.553s-5.353 0.133-7.729-1.818v0c-0.396-0.289-0.744-0.6-1.059-0.941l-1.748-2.248 14.884-13.624c0.048 3.689 0.106 7.383 0.064 11.078z"></path>
+         </symbol>
+         <symbol id="icon-aq_color" viewBox="0 0 30 32">
+            <title>aq_color</title>
+            <path fill="#52bdd3" style="fill: var(--color17, #52bdd3)" d="M30.217 23.753c-0.035 3.262-1.209 6.174-4.411 7.553s-5.36 0.135-7.743-1.818v0c-0.402-0.289-0.755-0.599-1.075-0.94l-1.747-2.247-10.895-11.274 10.64-9.841 0.025 0.025c2.662-2.543 5.37-5.864 9.466-5.095 5.090 0.959 5.615 5.58 5.645 9.846q0 1.354 0.030 2.712c0.050 3.692 0.105 7.393 0.065 11.080z"></path>
+            <path fill="#3e8fa5" style="fill: var(--color18, #3e8fa5)" d="M15.266 26.3l-1.893 2.268c-0.315 0.354-0.657 0.67-1.026 0.951l-0.018 0.013c-2.358 1.998-4.526 3.247-7.718 1.923s-4.436-4.231-4.516-7.478c-0.095-4.386-0.095-8.762-0.095-13.133 0-0.225 0-0.45 0-0.679-0.030-4.266 0.435-8.892 5.495-9.921 4.061-0.824 6.814 2.438 9.491 4.945l-10.64 9.836z"></path>
+         </symbol>
+         <symbol id="icon-ed_color" viewBox="0 0 30 32">
+            <title>ed_color</title>
+            <path fill="#a55d32" style="fill: var(--color19, #a55d32)" d="M15.001 5.183l-10.657 9.847-4.344-4.193c0-0.226 0-0.471 0-0.678-0.028-4.259 0.433-8.886 5.517-9.913 4.066-0.825 6.813 2.436 9.484 4.938z"></path>
+            <path fill="#cc7441" style="fill: var(--color20, #cc7441)" d="M30.153 12.674l-14.888 13.625-1.885 2.271c-0.315 0.345-0.657 0.654-1.027 0.929l-0.019 0.014c-2.356 1.983-4.523 3.246-7.717 1.922s-4.443-4.212-4.523-7.472c-0.094-4.367-0.094-8.749-0.094-13.126l4.344 4.193 10.657-9.847 0.028 0.028c2.643-2.544 5.352-5.866 9.437-5.098 5.098 0.942 5.625 5.578 5.654 9.847q0.033 1.347 0.033 2.714z"></path>
+         </symbol>
+         <symbol id="icon-mt_color" viewBox="0 0 30 32">
+            <title>mt_color</title>
+            <path fill="#51a53f" style="fill: var(--color21, #51a53f)" d="M14.997 5.185l-10.654 9.842-4.344-4.182c0-0.225 0-0.45 0-0.68-0.029-4.265 0.435-8.893 5.518-9.92 4.065-0.822 6.809 2.436 9.48 4.94z"></path>
+            <path fill="#70b95b" style="fill: var(--color22, #70b95b)" d="M30.215 23.753c-0.034 3.263-1.208 6.173-4.402 7.552s-5.381 0.132-7.743-1.815c-0.393-0.29-0.739-0.602-1.052-0.944l-1.756-2.251-1.893 2.27c-0.316 0.36-0.658 0.681-1.030 0.966l-0.017 0.012c-2.353 1.966-4.525 3.228-7.714 1.908s-4.432-4.231-4.51-7.484c-0.098-4.378-0.098-8.756-0.098-13.124l4.339 4.182 10.659-9.842 0.029 0.024c2.646-2.544 5.351-5.865 9.431-5.097 5.097 0.978 5.625 5.581 5.65 9.847q0 1.355 0.034 2.715c0.054 3.693 0.113 7.381 0.073 11.079z"></path>
+         </symbol>
+         <symbol id="icon-nt_color" viewBox="0 0 30 32">
+            <title>nt_color</title>
+            <path fill="#b95b8e" style="fill: var(--color23, #b95b8e)" d="M30.153 12.673l-14.888 13.646-10.925-11.273-4.34-4.201c0-0.223 0-0.452 0-0.675-0.030-4.271 0.432-8.894 5.517-9.932 4.062-0.824 6.813 2.438 9.485 4.966l0.025 0.025c2.647-2.562 5.333-5.885 9.44-5.115 5.1 0.958 5.626 5.577 5.656 9.847 0.005 0.904 0.020 1.808 0.030 2.711z"></path>
+            <path fill="#a53e72" style="fill: var(--color24, #a53e72)" d="M15.265 26.319l-1.892 2.269c-0.314 0.354-0.655 0.67-1.025 0.951l-0.018 0.013c-2.359 1.986-4.524 3.248-7.717 1.922s-4.439-4.251-4.519-7.513c-0.094-4.365-0.094-8.745-0.094-13.115l4.34 4.181z"></path>
+            <path fill="#9c3267" style="fill: var(--color25, #9c3267)" d="M30.217 23.757c-0.035 3.263-1.207 6.178-4.41 7.553s-5.358 0.134-7.742-1.817c-0.394-0.29-0.74-0.601-1.053-0.943l-1.748-2.23 14.898-13.626c0.040 3.695 0.094 7.369 0.055 11.064z"></path>
+         </symbol>
+         <symbol id="icon-aq_outline" viewBox="0 0 30 32">
+            <title>aq_outline</title>
+            <path fill="#32859c" style="fill: var(--color26, #32859c)" d="M22.872 31.893c-2.19 0-3.915-1.207-5.413-2.431v0c-0.419-0.309-0.787-0.642-1.12-1.007l-0.038-0.047-1.626-2.092-10.913-11.258 11.324-10.467 0.274-0.274c2.333-2.3 4.966-4.92 8.827-4.194 5.977 1.125 6.023 7.22 6.040 10.149q0 1.276 0.030 2.554v0.972c0.041 3.135 0.082 6.374 0.047 9.563-0.041 3.877-1.662 6.617-4.684 7.918-0.806 0.373-1.748 0.598-2.741 0.613zM18.245 27.962v0l0.23 0.189c2.281 1.867 3.989 2.678 6.483 1.602 2.407-1.038 3.644-3.192 3.677-6.407v0c0.033-3.17 0-6.401-0.047-9.525v-0.961c0-0.865-0.022-1.719-0.030-2.574-0.033-4.728-0.821-7.8-4.682-8.526-3.012-0.567-5.202 1.643-7.337 3.751-0.296 0.293-0.589 0.583-0.879 0.865l-0.548 0.526-0.038-0.033-8.931 8.246 9.791 10.105 1.662 2.144c0.199 0.216 0.411 0.412 0.637 0.591z"></path>
+            <path fill="#32859c" style="fill: var(--color26, #32859c)" d="M7.567 32c-0.973-0.012-1.893-0.221-2.728-0.59-2.994-1.245-4.654-3.961-4.747-7.837-0.079-3.192-0.093-6.437-0.093-9.577q0-1.44 0-2.877c0-0.214 0-0.427 0-0.641-0.016-2.927-0.060-9.021 5.9-10.229 3.849-0.78 6.522 1.804 8.884 4.082 0.274 0.274 0.567 0.548 0.849 0.821l0.646 0.597-10.13 9.358 10.278 10.628-2.272 2.738c-0.33 0.376-0.689 0.712-1.077 1.011-1.532 1.256-3.273 2.515-5.51 2.515zM7.244 1.777c-0.359 0.001-0.709 0.039-1.046 0.11-3.811 0.774-4.555 3.863-4.531 8.583 0 0.216 0 0.433 0 0.649q0 1.437 0 2.877c0 3.129 0 6.366 0.082 9.536s1.344 5.352 3.765 6.355c2.486 1.029 4.178 0.219 6.409-1.643v0l0.068-0.052c0.325-0.247 0.612-0.514 0.871-0.807l1.312-1.572-10.412-10.754 10.078-9.309-0.219-0.211c-1.911-1.856-3.88-3.762-6.376-3.762z"></path>
+         </symbol>
+         <symbol id="icon-ed_outline" viewBox="0 0 30 32">
+            <title>ed_outline</title>
+            <path fill="#a55d32" style="fill: var(--color19, #a55d32)" d="M4.953 16.235l-4.953-4.763v-0.355c0-0.212 0-0.424 0-0.638-0.017-2.928-0.061-9.023 5.902-10.231 3.852-0.779 6.522 1.805 8.877 4.084 0.275 0.275 0.567 0.55 0.848 0.826l0.652 0.614zM1.67 10.762l3.283 3.175 8.888-8.195-0.22-0.212c-2.163-2.091-4.403-4.251-7.391-3.649-3.841 0.779-4.593 3.861-4.56 8.574z"></path>
+            <path fill="#a55d32" style="fill: var(--color19, #a55d32)" d="M7.57 32c-0.972-0.012-1.893-0.221-2.727-0.59-2.996-1.245-4.655-3.961-4.749-7.839-0.077-3.192-0.094-6.436-0.094-9.576q0-1.439 0-2.878v-1.967l4.953 4.788 10.121-9.356 0.275-0.275c2.344-2.289 4.978-4.909 8.839-4.183 5.977 1.125 6.018 7.221 6.037 10.151q0 1.277 0.030 2.556l0.014 0.377-0.275 0.275-14.083 12.862-1.758 2.108c-0.332 0.376-0.692 0.712-1.083 1.010-1.512 1.279-3.262 2.537-5.5 2.537zM1.676 13.079v0.916c0 3.129 0 6.365 0.083 9.538s1.346 5.352 3.764 6.357c2.477 1.032 4.177 0.22 6.409-1.651v0l0.069-0.052c0.322-0.242 0.606-0.503 0.862-0.79l1.868-2.229 13.841-12.658q-0.014-1.101-0.025-2.201c-0.033-4.728-0.826-7.801-4.678-8.53-2.999-0.55-5.204 1.629-7.339 3.751-0.294 0.275-0.57 0.567-0.87 0.848l-0.55 0.528-0.039-0.025-10.118 9.356z"></path>
+         </symbol>
+         <symbol id="icon-mt_outline" viewBox="0 0 30 32">
+            <title>mt_outline</title>
+            <path fill="#469c32" style="fill: var(--color27, #469c32)" d="M4.951 16.23l-4.951-4.756v-0.352c0-0.215 0-0.432 0-0.646-0.017-2.924-0.061-9.020 5.9-10.225 3.851-0.778 6.522 1.805 8.877 4.082 0.275 0.275 0.567 0.55 0.85 0.825l0.652 0.613zM1.67 10.761l3.301 3.177 8.869-8.197-0.22-0.212c-2.162-2.091-4.401-4.253-7.389-3.648-3.851 0.778-4.594 3.851-4.561 8.588q0 0.146 0 0.292z"></path>
+            <path fill="#469c32" style="fill: var(--color27, #469c32)" d="M7.57 32c-0.973-0.011-1.894-0.221-2.729-0.59-2.995-1.245-4.654-3.96-4.747-7.836-0.080-3.235-0.094-6.519-0.094-9.699q0-1.375 0-2.751v-1.967l4.965 4.786 10.076-9.311 0.314-0.311c2.335-2.302 4.973-4.924 8.833-4.198 5.977 1.125 6.019 7.221 6.038 10.15q0 1.276 0.030 2.556v0.974c0.041 3.133 0.083 6.374 0.047 9.565-0.041 3.879-1.65 6.616-4.676 7.92-3.576 1.546-6.104-0.132-8.184-1.832-0.409-0.307-0.769-0.636-1.094-0.997l-0.039-0.048-1.018-1.309-1.131 1.356c-0.332 0.377-0.692 0.714-1.082 1.013-1.525 1.273-3.275 2.53-5.508 2.53zM1.675 13.080q0 0.396 0 0.795c0 3.169 0 6.445 0.083 9.658s1.345 5.35 3.766 6.354c2.495 1.034 4.189 0.215 6.431-1.667l0.055-0.044c0.322-0.242 0.606-0.503 0.862-0.789l2.456-2.944 2.278 2.921c0.26 0.28 0.543 0.532 0.847 0.756l0.044 0.034c2.283 1.868 3.991 2.677 6.484 1.604 2.407-1.037 3.642-3.194 3.678-6.407v0c0.033-3.169 0-6.401-0.047-9.526v-0.96c0-0.867-0.022-1.719-0.030-2.575-0.030-4.726-0.825-7.801-4.676-8.527-3.026-0.567-5.232 1.626-7.364 3.738-0.294 0.294-0.589 0.583-0.88 0.864l-0.55 0.531-0.039-0.019-10.12 9.353z"></path>
+         </symbol>
+         <symbol id="icon-nt_outline" viewBox="0 0 30 32">
+            <title>nt_outline</title>
+            <path fill="#9c3267" style="fill: var(--color25, #9c3267)" d="M15.272 26.93l-10.908-11.258-4.364-4.2v-0.994c-0.016-2.927-0.058-9.021 5.9-10.229 3.849-0.78 6.522 1.804 8.884 4.082l0.298 0.274 0.29-0.287c2.319-2.3 4.956-4.92 8.816-4.194 5.977 1.125 6.023 7.22 6.040 10.149q0 0.991 0.022 1.99v0.95zM1.67 10.762l3.882 3.748 9.78 10.097 13.243-12.12v-0.205q0-0.999-0.022-1.996c-0.033-4.728-0.821-7.8-4.682-8.526-3.012-0.564-5.202 1.643-7.34 3.751-0.296 0.293-0.589 0.583-0.879 0.865l-0.589 0.567-0.578-0.578c-0.296-0.274-0.583-0.548-0.873-0.838-2.163-2.092-4.397-4.252-7.392-3.647-3.833 0.778-4.578 3.869-4.55 8.589z"></path>
+            <path fill="#9c3267" style="fill: var(--color25, #9c3267)" d="M7.57 32c-0.973-0.012-1.893-0.221-2.728-0.59-2.997-1.245-4.654-3.961-4.749-7.837-0.077-3.192-0.093-6.439-0.093-9.58q0-1.437 0-2.875v-1.969l5.552 5.361 10.875 11.225-2.275 2.738c-0.33 0.374-0.688 0.707-1.077 1.003l-0.018 0.013c-1.506 1.248-3.247 2.511-5.487 2.511zM1.676 13.079v0.912c0 3.129 0 6.365 0.082 9.541s1.344 5.352 3.765 6.355 4.052 0.274 6.163-1.446v-0.016l0.323-0.252c0.319-0.242 0.601-0.502 0.854-0.788l1.314-1.575-9.821-10.13z"></path>
+            <path fill="#9c3267" style="fill: var(--color25, #9c3267)" d="M22.875 31.893c-2.19 0-3.926-1.216-5.426-2.442-0.415-0.306-0.779-0.636-1.109-0.999l-0.038-0.044-2.122-2.738 16.055-14.691 0.036 2.694c0.041 3.176 0.085 6.459 0.049 9.689-0.041 3.877-1.662 6.615-4.684 7.918-0.81 0.375-1.757 0.6-2.755 0.613zM17.599 27.378c0.26 0.28 0.542 0.532 0.846 0.755l0.044 0.033c2.283 1.867 3.992 2.675 6.483 1.602 2.407-1.038 3.644-3.192 3.677-6.407v0c0.030-2.867 0-5.782-0.036-8.627l-12.186 11.129z"></path>
+         </symbol>
+         <symbol id="icon-outline_icon" viewBox="0 0 30 32">
+            <title>outline_icon</title>
+            <path fill="none" stroke="#52329c" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color3, #52329c)" d="M15.090 6.085l-9.758 9.025-3.999-3.833v-0.613c0-3.913 0.4-8.158 5.059-9.098 3.733-0.766 6.272 2.226 8.698 4.519z"></path>
+            <path fill="none" stroke="#52329c" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color3, #52329c)" d="M28.981 12.951l-13.65 12.491-9.998-10.331 9.758-9.025c2.426-2.333 4.906-5.379 8.665-4.666 4.666 0.88 5.152 5.112 5.179 9.031q0.033 1.26 0.047 2.499z"></path>
+            <path fill="none" stroke="#52329c" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color3, #52329c)" d="M15.33 25.441l-1.733 2.086c-0.282 0.323-0.588 0.611-0.918 0.869l-0.015 0.011c-2.16 1.82-4.146 2.973-7.072 1.766s-4.092-3.886-4.166-6.845c-0.093-3.999-0.093-8.045-0.093-12.051l3.999 3.833z"></path>
+            <path fill="none" stroke="#52329c" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color3, #52329c)" d="M29.041 23.109c0 2.993-1.106 5.659-4.046 6.925s-4.912 0.12-7.099-1.666v0c-0.362-0.265-0.681-0.549-0.969-0.862l-1.597-2.064 13.65-12.491c0.047 3.386 0.093 6.779 0.060 10.158z"></path>
+         </symbol>
+         <symbol id="icon-sp_outline" viewBox="0 0 30 32">
+            <title>sp_outline</title>
+            <path fill="#a9972e" style="fill: var(--color14, #a9972e)" d="M28.858 12.238l0.024-0.022 1.131 1.221-0.024 0.022-1.131-1.221z"></path>
+            <path fill="#a9972e" style="fill: var(--color14, #a9972e)" d="M4.942 16.227l-4.942-4.755v-0.994c-0.018-2.927-0.058-9.020 5.901-10.23 3.848-0.778 6.519 1.793 8.878 4.085 0.292 0.277 0.569 0.548 0.848 0.813l0.653 0.612zM1.671 10.761l3.286 3.178 8.883-8.195-0.219-0.204c-2.163-2.102-4.399-4.262-7.388-3.659-3.845 0.778-4.598 3.863-4.563 8.589z"></path>
+            <path fill="#a9972e" style="fill: var(--color14, #a9972e)" d="M7.58 32c-0.973-0.016-1.893-0.229-2.726-0.601-3.008-1.233-4.664-3.95-4.76-7.825-0.079-3.195-0.093-6.44-0.093-9.58q0-1.437 0-2.875v-1.968l4.956 4.787 10.090-9.312 0.309-0.306c2.332-2.312 4.956-4.933 8.822-4.207 5.977 1.125 6.017 7.222 6.038 10.152q0 0.956 0.020 1.918v1.023l-14.35 13.12-1.749 2.108c-0.328 0.373-0.685 0.706-1.072 1.002l-0.018 0.013c-1.496 1.292-3.236 2.551-5.466 2.551zM1.676 13.079v0.915c0 3.131 0 6.367 0.082 9.539s1.344 5.353 3.767 6.356 4.052 0.292 6.163-1.458v-0.006l0.324-0.251c0.326-0.242 0.612-0.503 0.87-0.791l1.871-2.23 13.819-12.665v-0.277q0-0.962-0.020-1.924c-0.023-4.729-0.816-7.802-4.671-8.539-3-0.554-5.207 1.641-7.341 3.761-0.292 0.292-0.583 0.583-0.875 0.875l-0.583 0.563-0.038-0.038-10.099 9.329z"></path>
+            <path fill="#a9972e" style="fill: var(--color14, #a9972e)" d="M22.875 31.895c-2.189 0-3.915-1.207-5.411-2.431v0c-0.424-0.309-0.796-0.642-1.132-1.009l-0.037-0.046-2.122-2.735 16.061-14.691 0.035 2.676c0.041 3.181 0.085 6.469 0.050 9.706-0.041 3.878-1.662 6.615-4.685 7.918-0.81 0.375-1.756 0.599-2.753 0.612zM18.248 27.965v0l0.23 0.189c2.283 1.869 3.991 2.676 6.481 1.604 2.405-1.038 3.644-3.207 3.679-6.414v0c0.029-2.866 0-5.784-0.035-8.627l-12.169 11.149 1.166 1.501c0.198 0.215 0.41 0.411 0.636 0.589z"></path>
+         </symbol>
+         <symbol id="icon-white_icon_outline" viewBox="0 0 30 32">
+            <title>white_icon_outline</title>
+            <path fill="none" stroke="#e2e2e2" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color8, #e2e2e2)" d="M15.090 6.085l-9.758 9.025-3.999-3.833v-0.613c0-3.913 0.4-8.158 5.059-9.098 3.733-0.766 6.272 2.226 8.698 4.519z"></path>
+            <path fill="none" stroke="#e2e2e2" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color8, #e2e2e2)" d="M28.981 12.951l-13.65 12.491-9.998-10.331 9.758-9.025c2.426-2.333 4.906-5.379 8.665-4.666 4.666 0.88 5.152 5.112 5.179 9.031q0.033 1.26 0.047 2.499z"></path>
+            <path fill="none" stroke="#e2e2e2" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color8, #e2e2e2)" d="M15.33 25.441l-1.733 2.086c-0.282 0.323-0.588 0.611-0.918 0.869l-0.015 0.011c-2.16 1.82-4.146 2.973-7.072 1.766s-4.092-3.886-4.166-6.845c-0.093-3.999-0.093-8.045-0.093-12.051l3.999 3.833z"></path>
+            <path fill="none" stroke="#e2e2e2" stroke-width="2.6661" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="miter" style="stroke: var(--color8, #e2e2e2)" d="M29.041 23.109c0 2.993-1.106 5.659-4.046 6.925s-4.912 0.12-7.099-1.666v0c-0.362-0.265-0.681-0.549-0.969-0.862l-1.597-2.064 13.65-12.491c0.047 3.386 0.093 6.779 0.060 10.158z"></path>
+         </symbol>
+      </defs>
+   </svg>
+   <body class="scroll-assist btn-rounded">
+      <div class="nav-container">
+         <nav class="transparent absolute" style="border: none;">
+            <div class="nav-bar ">
+               <div class="module left">
+                  <a href="index.html">
+                     <img class="logo logo-light" alt="Mediabelt" src="img/logo_regular@2x.png">
+                     <div class="vnu"><img class="logo logo-dark" alt="Foundry" src="img/regular_icon@3x.png"></div>
+                  </a>
+               </div>
+               <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                  <i class="ti-menu"></i>
+               </div>
+               <div class="module-group right">
+                  <div class="module left">
+                     <ul class="menu">
+                        <li class="vpf">
+                           <a href="#sign-up" class="inner-link black" target="_self">Sign Up<br></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div class="main-container">
+         <a id="home" class="in-page-link"></a>
+         <section class="cover fullscreen">
+            <ul class="slides">
+               <li class="vid-bg image-bg overlay">
+                  <div class="fs-vid-background bw-bg">
+                     <video id="v"loop muted autoplay muted="" loop="true">
+                        <source src="video/video.mp4" type="video/mp4">
+                     </video>
+                  </div>
+                  <div class="container v-align-transform animated fadeInUp">
+                     <div class="row">
+                        <div class="col-sm-12 text-center mt-sm-64 mt-sm-hero" style="margin-top: -35px;">
+                           <h1 class="thin mb0 large bold black mt-sm-40">Convert without the clutter</h1>
+                           <h3 class="thin mb0 bold large black tx-shadow-sm">Generate leads, relationships, deals and revenue with your content<br></h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="align-bottom text-center animated fadeInUp">
+                     <a class="btn btn-lg btn-secondary mb-s-48 mb120 inner-link" href="#sign-up" id="hero_cta" target="_self">Sign Up</a>
+                  </div>
+               </li>
+            </ul>
+         </section>
+         <a id="product" class="in-page-link"></a>
+         <section class="image-square right">
+            <div class="col-md-6 image">
+               <div class="background-image-holder  slides kenburns">
+                  <img alt="image" class="background-image-holder burns"  src="https://images.pexels.com/photos/9451/laptop-eyes-technology-computer.jpg?w=1260&h=750&auto=compress&cs=tinysrgb">
+               </div>
+            </div>
+            <div class="col-md-6 content">
+               <h2 class="bold hero-2"> Now, There is a simpler way to Generate leads, relationships, deals and revenue with your content</h2>
+               <p class="mb0">&nbsp;We use the best practices for optimized and personalized content experience while respecting the privacy of your audience.<br><br></p>
+            </div>
+         </section>
+         <a id="cta-with-one-liner" class="inner-link" href="#sign-up" ></a>
+         <section class="bg-primary">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 text-center">
+                     <h2 class="cta mb32 inline-block p32 p0-xs">It's about time you de-cluttered your conversion process</h2>
+                  </div>
+                  <div class="col-sm-12 text-center">
+                     <a class="btn btn-lg btn-secondary mb0 mt-xs-24 bottom-fix" class="inner-link" href="#sign-up">Let's Go</a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <a id="features" class="in-page-link"></a>
+         <section>
+            <div class="container" style="height: 70vh;">
+               <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+                     <h2 class="sc-2 mb80">Under The Belt</h2>
+                     <div class="tabbed-content icon-tabs">
+                        <ul class="tabs">
+                           <li class="active">
+                              <div class="tab-title">
+                                 <i class="icon">
+                                    <svg style="margin-bottom: -14px;"class="mb icon-aq_color">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-aq_color"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="tab-content">
+                                 <h2 class="large mb16 animated fadeInUp aq"> Acquire</h2>
+                                 <p class="animated fadeInUp">
+                                    Convert your anonymous audience into named individuals. Start a conversation using content offers, instant landing pages, microsites and opt-in techniques that generate leads & capture emails.
+                                 </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <i class="icon">
+                                    <svg style="margin-bottom: -14px;"class="mb icon-nt_color">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-nt_color"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="tab-content">
+                                 <h2 class="nt large mb16 animated fadeInUp "> Nurture </h2>
+                                 <p class="animated fadeInUp">
+                                    Convert your identified audience into potential customers using content that is mapped to their mindset and stage in the buyer journey & automatically offering it to them along the way.
+                                 </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <i class="icon">
+                                    <svg style="margin-bottom: -14px;"class="mb icon-mt_color">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mt_color"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="tab-content">
+                                 <h2 class="large mb16 animated fadeInUp mt"> Monetize </h2>
+                                 <p class="animated fadeInUp">
+                                    Convert your audience into revenue opportunities with premium content paywalls, sponsorships and advertising.
+                                 </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <i class="icon">
+                                    <svg style="margin-bottom: -14px;"class="mb icon-ad_color">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ad_color"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="tab-content">
+                                 <h2 class="large mb16 animated fadeInUp sp"> Advise </h2>
+                                 <p class="  animated fadeInUp">
+                                    Convert your audience into customers using account-based marketing and sales tools that provide a customer-specific content & insights that close deals.
+                                 </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <i class="icon">
+                                    <svg style="margin-bottom: -14px;"class="mb icon-ed_color">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-ed_color"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="tab-content">
+                                 <h2 class="large mb16 animated fadeInUp ed"> Educate </h2>
+                                 <p class="animated fadeInUp">
+                                    Convert your new customers into successful customers using onboarding and support content that adapts to their specific questions and needs.
+                                 </p>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section style="background: #fafafa;">
+            <div class="container" >
+               <div class="row">
+                  <div class="col-sm-9">
+                     <h2 class="mb16">Smart features and strategies built into everything</h2>
+                     <h4 class="sub mb80"> Automatically use best practices for optimized and personalized content experience while respecting the privacy of your audience.
+                     </h4>
+                   </div>
+                   <div class="col-lg-12 col-md-12 col-sm-6">
+                     <div class="tabbed-content button-tabs">
+                        <ul class="tabs">
+                           <li class="active">
+                              <div class="tab-title">
+                                 <span >identification</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">Identify Key Visitors</h3>
+                                 <hr>
+                                <p class="big">
+                                    We have several techniques to respectfully identify your visitors including exit intent, lead generation forms and sign up forms.
+                                 </p>
+                                 <a data-title="identification" id="tab-btn" href="#sign-up"class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <span>Profiles</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">Generate intelligent and actionable profiles</h3>
+                                 <hr>
+                                 <p class="big">We have several techniques to respectfully build a robust profile of your audience. Ask for only those items that are useful and unknown.Periodically refresh and update with small asks along the way</p>
+                                   <a data-title="profiles" id="tab-btn" href="#sign-up"class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <span>recommendations</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">A smarter reccomendation platform</h3>
+                                 <hr>
+                                <p class="big">We have several techniques to respectfully offer your visitors the “next best” offer, piece of content or collection that will guide them along the journey.<br>Our techniques use sophisticated prediction and matching algorithms that deliver 10 times the clickthrough rate over other approaches.<br></p>
+                                  <a data-title="reccomendations" id="tab-btn" href="#sign-up"class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <span>campaigns</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">Top Down Campaigns Save Time and Effort</h3>
+                                 <hr>
+                                <p class="big">
+                                    Stop creating complicated, top-down campaigns and instead work from the content-up.
+                                 </p>
+                                   <a data-title="campaigns" id="tab-btn" href="#sign-up"class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <span>player</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">The only player solution you will need</h3>
+                                 <hr>
+                                 <p class="big">
+                                    A single, consistent and usable experience to view all types of media: video, podcasts, white papers, presentations, case studies, narrated slides, you name it!
+                                 </p>
+                                   <a data-title="player" id="tab-btn" href="#sign-up"class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <span>sharing</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">Taking the pain out of publishing</h3>
+                                 <hr>
+                                 <p class="big">Publish content with all of the right tagging so that you automatically get beautiful thumbnails and “cards” for sharing -- and automatically
+                                 </p>
+                                   <a data-title="sharing" id="tab-btn" href="#sign-up" class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="tab-title">
+                                 <span>promotion</span>
+                              </div>
+                              <div class="tab-content">
+                                 <h3 class="bold thin">Promote Content with ease</h3>
+                                 <hr>
+                                 <p class="big">
+                                    Automatically and persistently promote content on your social media accounts (but don’t worry, we won’t post without your final approval!)
+                                 </p>
+
+                                  <a data-title="promotion" id="tab-btn" href="#sign-up"class="btn btn-primary btn-lg"> Today </a>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <a id="sign-up" class="in-page-link"></a>
+         <section class="bg-primary">
+            <div class="container">
+               <div class="row mb48 mb-xs-24">
+                 <div class="col-md-6 col-md-offset-3 col-sm-10 text-center">
+                    <img alt="Pic" class="mb40 floating text-center" src="img/white_icon_outline.png">
+
+                 </div>
+                  <div class="col-md-6 col-md-offset-3 col-sm-10 text-center">
+
+                     <h2 style="line-height: 45px;">
+                     Starting Converting Without The Clutter</h2>
+                  </div>
+               </div>
+               <div class="row mb40 mb-xs-24">
+                  <div class="col-sm-6 col-sm-offset-3">
+                     <form class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly.">
+                        <input type="text" name="email" class="mb0 transparent validate-email validate-required signup-email-field" placeholder="Email Address">
+                        <button type="submit" class="btn btn-lg btn-secondary mb0">Keep Me Informed</button>
+                        <iframe srcdoc="<!-- Begin MailChimp Signup Form --><link href=&quot;https://cdn-images.mailchimp.com/embedcode/classic-081711.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;><style type=&quot;text/css&quot;>    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style><div id=&quot;mc_embed_signup&quot;><form action=&quot;//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=94d040322a&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>    <div id=&quot;mc_embed_signup_scroll&quot;>    <h2>Subscribe to our mailing list</h2><div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div><div class=&quot;mc-field-group&quot;>    <label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span></label>    <input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;></div><div class=&quot;mc-field-group&quot;>    <label for=&quot;mce-FNAME&quot;>First Name </label>    <input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;></div><div class=&quot;mc-field-group&quot;>    <label for=&quot;mce-LNAME&quot;>Last Name </label>    <input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;></div>    <div id=&quot;mce-responses&quot; class=&quot;clear&quot;>        <div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div>        <div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div>    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->    <div style=&quot;position: absolute; left: -5000px;&quot;><input type=&quot;text&quot; name=&quot;b_77142ece814d3cff52058a51f_94d040322a&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>    <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>    </div></form></div><script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->" class="mail-list-form">
+                        </iframe>
+                     </form>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-12 text-center">
+                     <p class="fade-half lead mb0">Mediabelt 2017, All Rights Reserved</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/smooth-scroll.min.js"></script>
+      <script src="js/parallax.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/svgxuse.min.js"></script>
+   </body>
+</html>
